@@ -1,9 +1,9 @@
 *{
     margin: 0%;
-    margin: 0%;
+    padding: 0%;
 }
 body{
-    background-color: cornflowerblue;
+    background-color: rgb(181, 116, 241);
 }
 #page{
     min-width: 360px; /*responsividade delimitando valor mínimo de width e máximo (abaixo), pra adaptar pra diferentes tipos de tela */
@@ -13,20 +13,59 @@ body{
     padding: 20px;
     background-color: beige;
 }
-img{
-    width: 100%;
+.banner{
+    width:100%;
 }
-@media screen and (min-width: 600px){ /*como vai ficar o background da página quando a tela alcançar um mínimo de 600px*/
+nav{
+    width: 100%;
+    height: auto;
+    background-color: rgb(143, 140, 146);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#menuOpcoes{
+    width: 100%;
+    list-style: none;
+}
+#menuOpcoes li{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+#menuOpcoes li:hover{
+    background-color: chocolate;
+}
+#menu{
+    height: 40px;
+    cursor: pointer;
+    display: none;
+}
+@media screen and (max-width: 730px){
+    #menu{
+        display:block;
+    }
+    #menuOpcoes{
+        display:none;
+    }
+
+}
+/*
+@media screen and (min-width: 600px){ *como vai ficar o background da página quando a tela alcançar um mínimo de 600px*
     #page{
         background-color: coral;
     }
 }
-@media screen and (min-width: 300px) and (max-width: 599px){ /*como a tela vai ficar quando o width estiver entre 300px e 599px*/
+@media screen and (min-width: 300px) and (max-width: 599px){ *como a tela vai ficar quando o width estiver entre 300px e 599px*
     #page{
         background-color: black;
         color:antiquewhite;
     }
 }
+*/
 @media print{  /*mídia pra impressão, como vai ficar na tela do ctrl P*/
     *{
         color: green
